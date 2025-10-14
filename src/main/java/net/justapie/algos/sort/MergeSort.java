@@ -39,7 +39,7 @@ public class MergeSort {
                 a.set(k, aux.get(j++));
             } else if (j > r) {
                 a.set(k, aux.get(i++));
-            } else if (cmp.compare(aux.get(j), aux.get(i)) > 0) {
+            } else if (cmp.compare(aux.get(j), aux.get(i)) < 0) {
                 a.set(k, aux.get(j++));
             } else {
                 a.set(k, aux.get(i++));
