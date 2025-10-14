@@ -6,6 +6,12 @@ import java.util.Comparator;
 import java.util.List;
 
 public class MergeSort {
+    /**
+     * Perform a merge sort on the given list.
+     * @param a List of elements to perform the sort procedure
+     * @param cmp Comparison function
+     * @param <T> Type of elements that are contained in the list
+     */
     public static <T> void sort(List<T> a, Comparator<T> cmp) {
         List<T> aux = new ArrayList<>(Collections.nCopies(a.size(), null));
         sort(a, aux, cmp, 0, a.size() - 1);
