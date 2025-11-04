@@ -1,4 +1,4 @@
-package net.justapie.algos.sort;
+package net.justapie.algos.algorithm.sort;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -8,36 +8,35 @@ public class QuickSort {
     /**
      * Perform a quick sort on the given list.
      * @param a List of elements to perform the sort procedure
-     * @param cmp Comparison function
      * @param <T> Type of elements that are contained in the list
      */
-    public static <T> void sort(List<T> a, Comparator<T> cmp) {
-        sort(a, cmp, 0, a.size() - 1);
+    public static <T extends Comparable<? super T>> void sort(List<T> a) {
+        sort(a,  0, a.size() - 1);
     }
 
-    private static <T> void sort(List<T> a, Comparator<T> cmp, int l, int r) {
+    private static <T extends Comparable<? super T>> void sort(List<T> a, int l, int r) {
         if (r <= l) {
             return;
         }
 
-        int pivot = partition(a, cmp, l, r);
-        sort(a, cmp, l, pivot - 1);
-        sort(a, cmp, pivot + 1, r);
+        int pivot = partition(a, l, r);
+        sort(a, l, pivot - 1);
+        sort(a, pivot + 1, r);
     }
 
-    private static <T> int partition(List<T> a, Comparator<T> cmp, int l, int r) {
+    private static <T extends Comparable<? super T>> int partition(List<T> a, int l, int r) {
         T pivot = a.get(l);
         int i = l;
         int j = r + 1;
 
         while (true) {
-            while (cmp.compare(a.get(++i), pivot) < 0) {
+            while (a.get(++i).compareTo(pivot) < 0) {
                 if (i == r) {
                     break;
                 }
             }
 
-            while (cmp.compare(pivot, a.get(--j)) < 0) {
+            while (a.get(--j).compareTo(pivot) > 0) {
                 if (j == l) {
                     break;
                 }
