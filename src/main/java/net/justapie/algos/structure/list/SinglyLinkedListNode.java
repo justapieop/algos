@@ -1,6 +1,6 @@
 package net.justapie.algos.structure.list;
 
-public class SinglyLinkedListNode<T extends Comparable<? super T>> {
+public class SinglyLinkedListNode<T> {
     private T value;
     private SinglyLinkedListNode<T> next;
 

@@ -1,6 +1,6 @@
 package net.justapie.algos.structure.list;
 
-public class SinglyLinkedList<T extends Comparable<? super T>> {
+public class SinglyLinkedList<T> {
     private SinglyLinkedListNode<T> head;
     private SinglyLinkedListNode<T> tail;
     private int size;
@@ -33,7 +33,7 @@ public class SinglyLinkedList<T extends Comparable<? super T>> {
     /**
      * Remove the value at the end of the list.
      * @return removed value
-     * @throws IllegalStateException if the list if empty
+     * @throws IllegalStateException if the list is empty
      */
     public T pop() throws IllegalStateException {
         if (this.size == 0) {

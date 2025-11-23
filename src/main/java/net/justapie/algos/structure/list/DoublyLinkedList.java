@@ -1,6 +1,6 @@
 package net.justapie.algos.structure.list;
 
-public class DoublyLinkedList<T extends Comparable<? super T>> {
+public class DoublyLinkedList<T> {
     private DoublyLinkedListNode<T> head;
     private DoublyLinkedListNode<T> tail;
     private int size;
