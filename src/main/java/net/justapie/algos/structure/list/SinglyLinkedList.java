@@ -40,10 +40,6 @@ public class SinglyLinkedList<T extends Comparable<? super T>> {
             throw new IllegalStateException("list is empty");
         }
 
-        if (this.tail == null) {
-            return null;
-        }
-
         T val = this.tail.getValue();
 
         if (this.head == this.tail) {
