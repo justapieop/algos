@@ -33,8 +33,13 @@ public class SinglyLinkedList<T extends Comparable<? super T>> {
     /**
      * Remove the value at the end of the list.
      * @return removed value
+     * @throws IllegalStateException if the list if empty
      */
-    public T pop() {
+    public T pop() throws IllegalStateException {
+        if (this.size == 0) {
+            throw new IllegalStateException("list is empty");
+        }
+
         if (this.tail == null) {
             return null;
         }
@@ -101,8 +106,12 @@ public class SinglyLinkedList<T extends Comparable<? super T>> {
      * @param pos position of the element
      * @return removed value
      * @throws IndexOutOfBoundsException if the position is out of bound [0, size - 1]
+     * @throws IllegalStateException if the list is empty
      */
-    public T remove(int pos) throws IndexOutOfBoundsException {
+    public T remove(int pos) throws IndexOutOfBoundsException, IllegalStateException {
+        if (this.size == 0) {
+            throw new IllegalStateException("list is empty");
+        }
         if (pos < 0 || pos >= this.size) {
             throw new IndexOutOfBoundsException(String.format("pos %d is out of bound 0 and %d", pos, this.size - 1));
         }
