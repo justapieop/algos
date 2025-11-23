@@ -32,6 +32,7 @@ public class SinglyLinkedList<T extends Comparable<? super T>> {
 
     /**
      * Remove the value at the end of the list.
+     * @return removed value
      */
     public T pop() {
         if (this.tail == null) {
@@ -98,6 +99,7 @@ public class SinglyLinkedList<T extends Comparable<? super T>> {
     /**
      * Remove the value at the specified position.
      * @param pos position of the element
+     * @return removed value
      * @throws IndexOutOfBoundsException if the position is out of bound [0, size - 1]
      */
     public T remove(int pos) throws IndexOutOfBoundsException {
