@@ -100,7 +100,7 @@ public class SinglyLinkedList<T extends Comparable<? super T>> {
      * @param pos position of the element
      * @throws IndexOutOfBoundsException if the position is out of bound [0, size - 1]
      */
-    public void remove(int pos) throws IndexOutOfBoundsException {
+    public T remove(int pos) throws IndexOutOfBoundsException {
         if (pos < 0 || pos >= this.size) {
             throw new IndexOutOfBoundsException(String.format("pos %d is out of bound 0 and %d", pos, this.size - 1));
         }
@@ -116,13 +116,17 @@ public class SinglyLinkedList<T extends Comparable<? super T>> {
             ++c;
         }
 
+        T val;
         if (prev == null) {
+            val = this.head.getValue();
             this.head = this.head.getNext();
         } else {
+            val = cur.getValue();
             prev.setNext(cur.getNext());
         }
 
         --this.size;
+        return val;
     }
 
     public SinglyLinkedListNode<T> getHead() {
