@@ -5,7 +5,7 @@ public class SinglyLinkedListNode<T extends Comparable<? super T>> {
     private SinglyLinkedListNode<T> next;
 
     /**
-     * Initialize a singly linked list node with a predefined value
+     * Initialize a singly linked list node with a predefined value.
      * @param value value for this node
      */
     public SinglyLinkedListNode(T value) {

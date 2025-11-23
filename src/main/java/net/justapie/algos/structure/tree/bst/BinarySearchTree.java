@@ -4,11 +4,17 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
     private BinarySearchTreeNode<T> root;
     private int numberOfNodes;
 
+    /**
+     * Initialize a binary search tree with default values.
+     */
     public BinarySearchTree() {
         this.root = null;
         this.numberOfNodes = 0;
     }
 
+    /**
+     * Initialize a binary search tree with an initial value.
+     */
     public BinarySearchTree(T value) {
         this.root = new BinarySearchTreeNode<>(value);
         this.numberOfNodes = 1;

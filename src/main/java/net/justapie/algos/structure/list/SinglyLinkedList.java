@@ -6,7 +6,7 @@ public class SinglyLinkedList<T extends Comparable<? super T>> {
     private int size;
 
     /**
-     * Initialize a singly linked list with the default value
+     * Initialize a singly linked list with the default value.
      */
     public SinglyLinkedList() {
         this.head = null;
@@ -15,7 +15,7 @@ public class SinglyLinkedList<T extends Comparable<? super T>> {
     }
 
     /**
-     * Insert a value at the end of the list
+     * Insert a value at the end of the list.
      * @param value value to insert
      */
     public void insert(T value) {
@@ -31,7 +31,7 @@ public class SinglyLinkedList<T extends Comparable<? super T>> {
     }
 
     /**
-     * Remove the value at the end of the list
+     * Remove the value at the end of the list.
      */
     public T pop() {
         if (this.tail == null) {
@@ -61,7 +61,7 @@ public class SinglyLinkedList<T extends Comparable<? super T>> {
     }
 
     /**
-     * Insert a value at a defined position in the list
+     * Insert a value at a defined position in the list.
      * @param value value to inset
      * @param pos position of the list
      * @throws IndexOutOfBoundsException if the position is out of bound [0, size]
@@ -96,7 +96,7 @@ public class SinglyLinkedList<T extends Comparable<? super T>> {
     }
 
     /**
-     * Remove the value at the specified position
+     * Remove the value at the specified position.
      * @param pos position of the element
      * @throws IndexOutOfBoundsException if the position is out of bound [0, size - 1]
      */

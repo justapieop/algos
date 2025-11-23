@@ -6,7 +6,7 @@ public class BinarySearchTreeNode<T extends Comparable<? super T>> {
     private BinarySearchTreeNode<T> right;
 
     /**
-     * Initialize a binary search tree node with predefined value
+     * Initialize a binary search tree node with a predefined value.
      * @param value value for this node
      */
     public BinarySearchTreeNode(T value) {
