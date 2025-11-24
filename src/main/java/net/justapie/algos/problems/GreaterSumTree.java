@@ -1,9 +1,8 @@
 package net.justapie.algos.problems;
 
+import net.justapie.algos.structure.stack.Stack;
 import net.justapie.algos.structure.tree.bst.BinarySearchTree;
 import net.justapie.algos.structure.tree.bst.BinarySearchTreeNode;
-
-import java.util.Stack;
 
 public class GreaterSumTree {
     private static void traverse(BinarySearchTreeNode<Integer> bstNode, Stack<Integer> st) {
