@@ -16,11 +16,13 @@ public class SelectionSort {
         }
 
         for (int i = 0; i < a.size() - 1; i++) {
+            int s = i;
             for (int j = i + 1; j < a.size(); j++) {
-                if (a.get(j).compareTo(a.get(i)) < 0) {
-                    Collections.swap(a, i, j);
+                if (a.get(j).compareTo(a.get(s)) < 0) {
+                    s = j;
                 }
             }
+            Collections.swap(a, i, s);
         }
     }
 }
